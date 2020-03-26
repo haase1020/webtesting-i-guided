@@ -2,19 +2,14 @@ module.exports = {
   add,
 };
 
-function add() {
-  return null;
+function add(args) {
+  if (isNumber(a) && isNumber(b)) {
+    return a + b;
+  } else {
+    throw new Error("Both arguments need to be numbers");
+  }
 }
 
-
-//function add(a,b) {
-  //return a + b;
-// --> an example of a pure function --> doesn't rely on any outside functions
-//}
-
-
-//when testing, start with low hanging fruit --> happy path (your basic assumptions)
-//check for invalid input
-//then move on to edge cases
-//regression: code that WAS working stops working
-//unit testing is more GRANULAR --> 
+function isNumber(value) {
+  return !isNaN(parseFloat(value)) && isFinite(value);
+}
