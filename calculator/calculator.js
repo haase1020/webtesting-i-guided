@@ -2,7 +2,7 @@ module.exports = {
   add,
 };
 
-function add(args) {
+function add(a=0,b=0) {
   if (isNumber(a) && isNumber(b)) {
     return a + b;
   } else {
